@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fujão</title>
+
+    <style>
+
+
+        body{
+            background-color: black;
+        }
+
+        .painel{
+            margin: center;
+            background-color: wheat;
+            width: 385px;
+            height: 600px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 100px;
+
+        }
+
+        
+
+        #sim{
+            
+            height: 40px;
+            width: 60px;
+            background-color: brown;
+            border: 2px solid wheat;
+            border-radius: 10px;
+            color: bisque; 
+            margin-left: -80px;
+            
+        }
+
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: brown;
+            border: 2px solid wheat;
+            border-radius: 10px;
+            color: bisque;
+            margin-left: center;
+            
+        }
+
+    
+
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+
+        <h1> Bom dia Moça Bunita do Zap Zap! </h1>
+
+        <img src="https://www.icegif.com/wp-content/uploads/2023/04/icegif-586.gif" alt="">
+
+        <h2>Sexta iremos jantar ? Sz</h2>
+
+        <button id="sim" onclick="parabens()"> SIM! </button>
+        <button onmouseover="fuja()"  id="nao"> NÂO! </button>
+
+        
+
+    </div>
+
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+        }
+
+        function parabens(){
+            alert("Você escolheu sabiamente, você ira receber as opções de lugares no decorrer da semana!");
+        }
+
+    </script>
+    
+</body>
+</html>
